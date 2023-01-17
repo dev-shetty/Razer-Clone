@@ -2,7 +2,7 @@ import "./App.css"
 
 function App() {
   return (
-    <div className="bg-red-500">
+    <div className="h-full bg-red-500">
       <h1>Hello</h1>
     </div>
   )
