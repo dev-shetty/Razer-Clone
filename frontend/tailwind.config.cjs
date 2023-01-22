@@ -12,7 +12,7 @@ module.exports = {
         "razer-green": "#44d62c",
       },
       fontFamily: {
-        primary: "Razer",
+        primary: ["Razer", "sans-serif"],
       },
       fontSize: {
         primary: "0.9rem",
