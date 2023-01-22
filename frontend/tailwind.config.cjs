@@ -2,7 +2,22 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "primary-900": "#000000",
+        "primary-400": "#999999",
+        "primary-300": "#888888",
+        "primary-200": "#555555",
+        "primary-100": "#FFFFFF",
+        "razer-green": "#44d62c",
+      },
+      fontFamily: {
+        primary: "Razer",
+      },
+      fontSize: {
+        primary: "0.9rem",
+      },
+    },
   },
   plugins: [],
 }

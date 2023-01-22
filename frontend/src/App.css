@@ -7,3 +7,8 @@ body,
 #root {
   @apply h-full;
 }
+
+@font-face {
+  font-family: Razer;
+  src: url("../public/Fonts/RazerF5-Reg.otf");
+}
