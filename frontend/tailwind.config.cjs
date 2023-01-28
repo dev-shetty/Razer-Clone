@@ -5,9 +5,10 @@ module.exports = {
     extend: {
       colors: {
         "primary-900": "#000000",
-        "primary-400": "#999999",
+        "primary-800": "#222222",
         "primary-300": "#888888",
         "primary-200": "#555555",
+        "primary-400": "#999999",
         "primary-100": "#FFFFFF",
         "razer-green": "#44d62c",
       },

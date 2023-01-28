@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: Razer;
-  src: url("../public/Fonts/RazerF5-Reg.otf");
+  src: url("Fonts/RazerF5-Reg.otf");
 }
 
 html,
@@ -15,4 +15,32 @@ body,
 
 .nav-item {
   @apply cursor-pointer hover:text-primary-100 transition-colors duration-300;
+}
+.bg-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.razer-edge {
+  background-image: url("Backgrounds/razer-edge-b-desktop.jpg");
+  background-position: center 75%;
+}
+.razer-blade {
+  background-image: url("Backgrounds/razer-blade-16-18-homepage-desktop.jpg");
+  background-position: center;
+}
+.razer-hammerhead {
+  background-image: url("Backgrounds/razer-hammerhead-hyperspeed-xbox-homepage-desktop1x.jpg");
+  background-position: center;
+}
+
+@media screen and (max-width: 50em) {
+  .razer-edge {
+    background-image: url("Backgrounds/razer-edge-homepage-mobile2x.jpg");
+  }
+  .razer-blade {
+    background-image: url("Backgrounds/razer-blade-16-18-homepage-mobile.jpg");
+  }
+  .razer-hammerhead {
+    background-image: url("Backgrounds/razer-hammerhead-hyperspeed-xbox-homepage-mobile2x.jpg");
+  }
 }
