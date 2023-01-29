@@ -1,6 +1,7 @@
 import NewYearSpecial from "../components/Home/NewYearSpecial"
 import RazerBlade from "../components/Home/RazerBlade"
 import RazerEdge from "../components/Home/RazerEdge"
+import RazerEnkiPro from "../components/Home/RazerEnkiPro"
 import RazerHammerHead from "../components/Home/RazerHammerhead"
 import ImageSplit from "../components/Home/Utility/ImageSplit"
 
@@ -13,7 +14,7 @@ function HomePage() {
       <ImageSplit>
         <>
           <NewYearSpecial />
-          <NewYearSpecial />
+          <RazerEnkiPro />
         </>
       </ImageSplit>
     </div>

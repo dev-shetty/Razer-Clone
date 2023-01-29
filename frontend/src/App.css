@@ -34,6 +34,9 @@ body,
 .new-year-special {
   background-image: url("Backgrounds/new-year-new-gear-950x580-desktop.jpg");
 }
+.razer-enki-pro {
+  background-image: url("Backgrounds/enkipro-lamborghini-b-desktop.jpg");
+}
 
 @media screen and (max-width: 50em) {
   .razer-edge {
@@ -44,5 +47,9 @@ body,
   }
   .razer-hammerhead {
     background-image: url("Backgrounds/razer-hammerhead-hyperspeed-xbox-homepage-mobile2x.jpg");
+  }
+  .razer-enki-pro {
+    background-image: url("Backgrounds/enkipro-lamborghini-b-mobile.jpg");
+    background-position: center 75%;
   }
 }

@@ -28,6 +28,7 @@ function ImageFull({
       >
         <div className="flex flex-col items-center text-center">
           <div className="flex flex-col gap-1">
+            {label && <div className="w-fit mx-auto text-xs">{label}</div>}
             <h2
               className={`${
                 isSmallGrid ? "text-2xl md:text-4xl" : "text-3xl md:text-5xl"
