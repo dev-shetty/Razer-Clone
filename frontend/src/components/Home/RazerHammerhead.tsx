@@ -1,4 +1,4 @@
-import ImageFull from "./ImageFull"
+import ImageFull from "./Utility/ImageFull"
 
 function RazerHammerHead() {
   return (

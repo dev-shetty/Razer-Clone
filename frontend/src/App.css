@@ -19,6 +19,7 @@ body,
 .bg-image {
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .razer-edge {
   background-image: url("Backgrounds/razer-edge-b-desktop.jpg");
@@ -26,11 +27,12 @@ body,
 }
 .razer-blade {
   background-image: url("Backgrounds/razer-blade-16-18-homepage-desktop.jpg");
-  background-position: center;
 }
 .razer-hammerhead {
   background-image: url("Backgrounds/razer-hammerhead-hyperspeed-xbox-homepage-desktop1x.jpg");
-  background-position: center;
+}
+.new-year-special {
+  background-image: url("Backgrounds/new-year-new-gear-950x580-desktop.jpg");
 }
 
 @media screen and (max-width: 50em) {

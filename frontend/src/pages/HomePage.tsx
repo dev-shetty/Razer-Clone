@@ -1,6 +1,8 @@
+import NewYearSpecial from "../components/Home/NewYearSpecial"
 import RazerBlade from "../components/Home/RazerBlade"
 import RazerEdge from "../components/Home/RazerEdge"
 import RazerHammerHead from "../components/Home/RazerHammerhead"
+import ImageSplit from "../components/Home/Utility/ImageSplit"
 
 function HomePage() {
   return (
@@ -8,6 +10,12 @@ function HomePage() {
       <RazerEdge />
       <RazerBlade />
       <RazerHammerHead />
+      <ImageSplit>
+        <>
+          <NewYearSpecial />
+          <NewYearSpecial />
+        </>
+      </ImageSplit>
     </div>
   )
 }
