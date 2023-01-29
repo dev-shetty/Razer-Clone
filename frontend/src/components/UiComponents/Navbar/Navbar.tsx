@@ -7,7 +7,7 @@ import Notification from "../Notification/Notification"
 function Navbar() {
   return (
     <>
-      <nav className="fixed w-full bg-primary-900 z-50 flex items-center px-4 justify-between md:justify-center gap-8 xl:gap-16 py-3 border-b-[1px] border-b-razer-green">
+      <nav className="sticky top-0 w-full bg-primary-900 z-50 flex items-center px-4 justify-between md:justify-center gap-8 xl:gap-16 py-3 border-b-[1px] border-b-razer-green">
         <div className="block md:hidden cursor-pointer">
           <AiOutlineMenu className="nav-item scale-150" />
         </div>

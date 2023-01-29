@@ -37,6 +37,18 @@ body,
 .razer-enki-pro {
   background-image: url("Backgrounds/enkipro-lamborghini-b-desktop.jpg");
 }
+.razer-naga {
+  background-image: url("Backgrounds/razer-naga-v2-pro-wow-dragonflight--950x580-desktop.jpg");
+}
+.razerstore-orlando {
+  background-image: url("Backgrounds/razerstore-orlando-b-950x580-desktop.jpg");
+}
+.razer-leviathan {
+  background-image: url("Backgrounds/leviathanv2-pro-b-950x580-desktop.jpg");
+}
+.choose-your-blade {
+  background-image: url("Backgrounds/razer-blade-141517-b-950x580-desktop.jpg");
+}
 
 @media screen and (max-width: 50em) {
   .razer-edge {
