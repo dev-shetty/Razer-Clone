@@ -1,4 +1,4 @@
-import { FaAngleLeft } from "react-icons/fa"
+import { FaAngleRight } from "react-icons/fa"
 import { SiLinkedin } from "react-icons/si"
 import { VscGithub } from "react-icons/vsc"
 import { TiSocialTwitterCircular } from "react-icons/ti"
@@ -6,8 +6,8 @@ import { FaDev } from "react-icons/fa"
 
 function Footer() {
   return (
-    <footer>
-      <div>
+    <footer className="text-xs grid px-[5%] lg:px-[15%] bg-primary-850 text-primary-400">
+      <div className="grid grid-cols-5 py-8">
         <div>
           <ul>
             <li className="title">Shop</li>
@@ -53,9 +53,11 @@ function Footer() {
             <li>Contact Us</li>
           </ul>
         </div>
-        <div>
-          <p>FOR GAMERS, BY GAMERS.&trade;</p>
-          <div className="text-razer-green text-xl">
+        <div className="ml-auto">
+          <p className="text-razer-green text-sm text-right">
+            FOR GAMERS, BY GAMERS.&trade;
+          </p>
+          <div className="flex gap-2 mt-2 text-razer-green text-2xl justify-end">
             <VscGithub />
             <SiLinkedin />
             <TiSocialTwitterCircular />
@@ -63,19 +65,35 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div>
-        <p>Copyright &copy; 2023 Razer Inc. All rights reserved</p>
-        <div>
-          <p>Site Map</p>
-          <p>Legal Terms</p>
-          <p>Privacy Policy</p>
-          <p>Cookie Policy</p>
+      <div className="flex justify-between border-t-[1px] border-t-primary-400 py-4">
+        <div className="flex flex-col lg:flex-row gap-2 md:gap-8">
+          <p>Copyright &copy; 2023 Razer Inc. All rights reserved</p>
+          <div className="flex gap-4">
+            <p className="hover:text-primary-100 hover:underline cursor-pointer">
+              Site Map
+            </p>
+            <p>|</p>
+            <p className="hover:text-primary-100 hover:underline cursor-pointer">
+              Legal Terms
+            </p>
+            <p>|</p>
+            <p className="hover:text-primary-100 hover:underline cursor-pointer">
+              Privacy Policy
+            </p>
+            <p>|</p>
+            <p className="hover:text-primary-100 hover:underline cursor-pointer">
+              Cookie Policy
+            </p>
+          </div>
         </div>
-        <div>
-          <p>United States</p>
-          <div>
+        <div className="flex flex-col gap-2 md:flex-row">
+          <div className="flex gap-2">
+            <p className="text-primary-100">United States</p>
+            <p className="text-primary-100">|</p>
+          </div>
+          <div className="flex items-center hover:text-primary-100 hover:underline cursor-pointer">
             <p>Change Location</p>
-            <FaAngleLeft />
+            <FaAngleRight />
           </div>
         </div>
       </div>

@@ -50,6 +50,16 @@ body,
   background-image: url("Backgrounds/razer-blade-141517-b-950x580-desktop.jpg");
 }
 
+.title {
+  @apply text-primary-100;
+}
+footer ul {
+  @apply flex flex-col gap-2;
+}
+footer ul > li:not(.title) {
+  @apply hover:text-primary-100 hover:underline cursor-pointer transition-colors w-fit;
+}
+
 @media screen and (max-width: 50em) {
   .razer-edge {
     background-image: url("Backgrounds/razer-edge-homepage-mobile2x.jpg");
@@ -65,3 +75,7 @@ body,
     background-position: center 75%;
   }
 }
+/* 
+* {
+  outline: 1px solid red;
+} */
