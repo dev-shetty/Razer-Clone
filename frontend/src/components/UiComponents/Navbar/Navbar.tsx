@@ -1,10 +1,13 @@
+import { useContext } from "react"
 import {
   AiOutlineMenu,
   AiOutlineSearch,
   AiOutlineShoppingCart,
 } from "react-icons/ai"
+import { CartContext } from "../../../context/CartProvider"
 import Notification from "../Notification/Notification"
 function Navbar() {
+  const { cart, setCart } = useContext(CartContext)
   return (
     <>
       <nav className="sticky top-0 w-full bg-primary-900 z-50 flex items-center px-4 justify-between md:justify-center gap-8 xl:gap-16 py-3 border-b-[1px] border-b-razer-green">
@@ -27,9 +30,10 @@ function Navbar() {
             <AiOutlineSearch className="nav-item scale-150" />
           </li>
         </ul>
-        <div className="md:mr-auto text-primary-400">
+        <div className="md:mr-auto text-primary-400" onClick={setCart(!cart)}>
           <AiOutlineShoppingCart className="nav-item scale-150" />
         </div>
+        {cart && <></>}
       </nav>
       <Notification />
     </>
