@@ -1,4 +1,5 @@
 import { FaAngleRight } from "react-icons/fa"
+import useCountdown from "../../../hooks/useCountdown"
 
 type Props = {
   product: string
@@ -19,6 +20,9 @@ function ImageFull({
   isSmallGrid,
   label,
 }: Props) {
+  // Gets Date of 6 Feb 2023
+  const date = new Date(2023, 1, 6).getTime()
+  const [days, hours, minutes, seconds] = useCountdown(date)
   return (
     <div className="flex justify-center">
       <div
@@ -47,7 +51,15 @@ function ImageFull({
           {/* Timer is Optional */}
           {timer && (
             <div className="timer mt-1">
-              <p className="uppercase text-2xl font-bold">{timer}</p>
+              <div className="flex gap-1 uppercase text-3xl font-bold">
+                <p>{days}</p>
+                <p>:</p>
+                <p>{hours}</p>
+                <p>:</p>
+                <p>{minutes}</p>
+                <p>:</p>
+                <p>{seconds}</p>
+              </div>
             </div>
           )}
           <div className="links flex gap-8 mt-4">
