@@ -5,7 +5,6 @@ type Props = {
 }
 interface CartProps {
   cart: boolean
-  // setCart: React.Dispatch<React.SetStateAction<boolean>>
   setCart: any
 }
 

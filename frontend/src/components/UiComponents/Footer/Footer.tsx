@@ -6,7 +6,7 @@ import { FaDev } from "react-icons/fa"
 
 function Footer() {
   return (
-    <footer className="text-xs grid px-[5%] lg:px-[15%] bg-primary-850 text-primary-400">
+    <footer className="text-xs hidden md:grid px-[5%] lg:px-[15%] bg-primary-850 text-primary-400">
       <div className="grid grid-cols-5 py-8">
         <div>
           <ul>

@@ -7,9 +7,9 @@ import {
 import { MdOutlineStorefront } from "react-icons/md"
 import { BiUser, BiLogIn } from "react-icons/bi"
 import { RiVipDiamondLine } from "react-icons/ri"
-
 import { CartContext } from "../../../context/CartProvider"
 import Notification from "../Notification/Notification"
+
 function Navbar() {
   const { cart, setCart } = useContext(CartContext)
   return (
