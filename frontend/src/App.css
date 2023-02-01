@@ -59,6 +59,18 @@ footer ul {
 footer ul > li:not(.title) {
   @apply hover:text-primary-100 hover:underline cursor-pointer transition-colors w-fit;
 }
+.dropdown::after {
+  content: "";
+  position: absolute;
+  background-color: red;
+  top: -0.5rem;
+  left: 85%;
+  right: 1rem;
+  height: 1rem;
+  aspect-ratio: 1;
+  rotate: 45deg;
+  @apply bg-primary-800 border-t-2 border-l-2 border-primary-200;
+}
 
 @media screen and (max-width: 50em) {
   .razer-edge {
