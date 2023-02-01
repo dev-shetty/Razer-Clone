@@ -53,7 +53,7 @@ function ImageFull({
           <div className="links flex gap-8 mt-4">
             {links.map((link, index) => (
               <div
-                className={`flex items-center ${
+                className={`flex items-center hover:underline cursor-pointer ${
                   isSmallGrid ? "" : "md:text-xl"
                 }`}
                 key={index}
@@ -69,7 +69,7 @@ function ImageFull({
       </div>
       <div
         className={`${product} bg-image ${
-          isSmallGrid ? "h-[60vh]" : "h-[75vh]"
+          isSmallGrid ? "h-[75vh] md:h-[60vh]" : "h-screen md:h-[75vh]"
         } overflow-hidden w-full`}
       ></div>
     </div>

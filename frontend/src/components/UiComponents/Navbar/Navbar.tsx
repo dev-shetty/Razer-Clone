@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import {
+  AiOutlineClose,
   AiOutlineMenu,
   AiOutlineSearch,
   AiOutlineShoppingCart,
@@ -7,21 +8,57 @@ import {
 import { MdOutlineStorefront } from "react-icons/md"
 import { BiUser, BiLogIn } from "react-icons/bi"
 import { RiVipDiamondLine } from "react-icons/ri"
+import { FaAngleRight } from "react-icons/fa"
 import { CartContext } from "../../../context/CartProvider"
+import { NavbarContext } from "../../../context/NavbarProvider"
 import Notification from "../Notification/Notification"
+import SearchBox from "../Inputs/SearchBox"
 
 function Navbar() {
   const { cart, setCart } = useContext(CartContext)
+  const { nav, setNav } = useContext(NavbarContext)
   return (
     <>
       <nav className="sticky top-0 w-full bg-primary-900 z-50 flex items-center px-4 justify-between md:justify-center gap-8 xl:gap-16 py-3 border-b-[1px] border-b-razer-green">
-        <div className="block md:hidden cursor-pointer">
-          <AiOutlineMenu className="nav-item scale-150" />
+        <div className="block md:hidden cursor-pointer z-20">
+          {nav ? (
+            <AiOutlineClose
+              className="nav-item scale-150"
+              onClick={() => setNav(!nav)}
+            />
+          ) : (
+            <AiOutlineMenu
+              className="nav-item scale-150"
+              onClick={() => setNav(!nav)}
+            />
+          )}
         </div>
-        <div className="md:ml-auto cursor-pointer">
+        {nav && (
+          <nav className="fixed md:hidden inset-0 bg-primary-900 z-10">
+            <div className="mt-16 mx-4">
+              <SearchBox />
+              <div className="m-4">
+                <ul className="flex flex-col text-base">
+                  <li className="mobile-nav-item flex items-center gap-2">
+                    <p>PC</p>
+                    <FaAngleRight className="text-razer-green" />
+                  </li>
+                  <li className="mobile-nav-item">Console</li>
+                  <li className="mobile-nav-item">Mobile</li>
+                  <li className="mobile-nav-item">Lifestyle</li>
+                  <li className="mobile-nav-item">Services</li>
+                  <li className="mobile-nav-item">Community</li>
+                  <li className="mobile-nav-item">Support</li>
+                  <li className="mobile-nav-item">Store</li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        )}
+        <div className="md:ml-auto cursor-pointer z-20">
           <img src="Misc/razer-logo.svg" alt="Razer Logo" className="w-8" />
         </div>
-        <ul className="hidden items-center gap-4 lg:gap-8 xl:gap-16 md:flex">
+        <ul className="hidden md:flex items-center gap-4 lg:gap-8 xl:gap-16">
           <li className="nav-item">PC</li>
           <li className="nav-item">Console</li>
           <li className="nav-item">Mobile</li>

@@ -59,6 +59,12 @@ footer ul {
 footer ul > li:not(.title) {
   @apply hover:text-primary-100 hover:underline cursor-pointer transition-colors w-fit;
 }
+.mobile-nav-item {
+  @apply border-b-2 border-b-primary-200 py-4;
+}
+.mobile-nav-item:not(:has(> p)) {
+  @apply hover:text-primary-100 cursor-pointer transition-colors;
+}
 .dropdown::after {
   content: "";
   position: absolute;

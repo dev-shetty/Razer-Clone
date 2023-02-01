@@ -1,18 +1,14 @@
 import React, { useState } from "react"
+import { ChildrenProp } from "../utils/types"
 
-type Props = {
-  children: JSX.Element
-}
-interface CartProps {
+interface CartContextType {
   cart: boolean
   setCart: any
 }
 
-export const CartContext = React.createContext<Partial<CartProps>>({
-  cart: false,
-})
+export const CartContext = React.createContext<Partial<CartContextType>>({})
 
-function CartProvider({ children }: Props) {
+function CartProvider({ children }: ChildrenProp) {
   const [cart, setCart] = useState(false)
   return (
     <CartContext.Provider value={{ cart, setCart }}>
