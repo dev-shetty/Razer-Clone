@@ -56,7 +56,11 @@ function Navbar() {
           </nav>
         )}
         <div className="md:ml-auto cursor-pointer z-20">
-          <img src="Misc/razer-logo.svg" alt="Razer Logo" className="w-8" />
+          <img
+            src="assets/Misc/razer-logo.svg"
+            alt="Razer Logo"
+            className="w-8"
+          />
         </div>
         <ul className="hidden md:flex items-center gap-4 lg:gap-8 xl:gap-16">
           <li className="nav-item">PC</li>
