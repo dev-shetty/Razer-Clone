@@ -1,12 +1,13 @@
 import { FaAngleRight } from "react-icons/fa"
 import { SiLinkedin } from "react-icons/si"
 import { VscGithub } from "react-icons/vsc"
-import { TiSocialTwitterCircular } from "react-icons/ti"
+import { AiOutlineTwitter } from "react-icons/ai"
 import { FaDev } from "react-icons/fa"
+import ForkMe from "../Other/ForkMe"
 
 function Footer() {
   return (
-    <footer className="text-xs hidden md:grid px-[5%] lg:px-[15%] bg-primary-850 text-primary-400">
+    <footer className="relative text-xs hidden md:grid px-[5%] lg:px-[15%] bg-primary-850 text-primary-400 overflow-hidden">
       <div className="grid grid-cols-5 py-8">
         <div>
           <ul>
@@ -53,20 +54,47 @@ function Footer() {
             <li>Contact Us</li>
           </ul>
         </div>
-        <div className="ml-auto">
+        <div className="flex flex-col ml-auto">
           <p className="text-razer-green text-sm text-right">
-            FOR GAMERS, BY GAMERS.&trade;
+            Built by Deveesh Shetty
           </p>
           <div className="flex gap-2 mt-2 text-razer-green text-2xl justify-end">
-            <VscGithub />
-            <SiLinkedin />
-            <TiSocialTwitterCircular />
-            <FaDev />
+            <a
+              href="https://github.com/Deveesh-Shetty"
+              target="_blank"
+              className=" hover:text-primary-100"
+            >
+              <VscGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/deveesh-shetty-908539214"
+              target="_blank"
+              className=" hover:text-primary-100"
+            >
+              <SiLinkedin />
+            </a>
+            <a
+              href="https://twitter.com/shettydeveesh"
+              target="_blank"
+              className=" hover:text-primary-100"
+            >
+              <AiOutlineTwitter />
+            </a>
+            <a
+              href="https://dev.to/deveeshshetty1209"
+              target="_blank"
+              className=" hover:text-primary-100"
+            >
+              <FaDev />
+            </a>
+          </div>
+          <div className="mt-3">
+            <ForkMe />
           </div>
         </div>
       </div>
       <div className="flex justify-between border-t-[1px] border-t-primary-400 py-4">
-        <div className="flex flex-col lg:flex-row gap-2 md:gap-8">
+        <div className="flex flex-col lg:flex-row gap-2 md:gap-1  ">
           <p>Copyright &copy; 2023 Razer Inc. All rights reserved</p>
           <div className="flex gap-4">
             <p className="hover:text-primary-100 hover:underline cursor-pointer">
@@ -86,7 +114,7 @@ function Footer() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col gap-2 md:flex-row">
+        <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
           <div className="flex gap-2">
             <p className="text-primary-100">United States</p>
             <p className="text-primary-100">|</p>
