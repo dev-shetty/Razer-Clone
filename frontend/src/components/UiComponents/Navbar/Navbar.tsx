@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import {
   AiOutlineClose,
   AiOutlineMenu,
@@ -13,10 +13,12 @@ import { CartContext } from "../../../context/CartProvider"
 import { NavbarContext } from "../../../context/NavbarProvider"
 import Notification from "../Notification/Notification"
 import SearchBox from "../Inputs/SearchBox"
+import { VscClose } from "react-icons/vsc"
 
 function Navbar() {
   const { cart, setCart } = useContext(CartContext)
   const { nav, setNav } = useContext(NavbarContext)
+  const [search, setSearch] = useState(false)
   return (
     <>
       <nav className="md:sticky top-0 w-full bg-primary-900 z-50 flex items-center px-4 justify-between md:justify-center gap-8 xl:gap-16 py-3 border-b-[1px] border-b-razer-green">
@@ -58,24 +60,41 @@ function Navbar() {
         <div className="md:ml-auto cursor-pointer z-20">
           <img src="/Misc/razer-logo.svg" alt="Razer Logo" className="w-8" />
         </div>
-        <ul className="hidden md:flex items-center gap-4 lg:gap-8 xl:gap-16">
-          <li className="nav-item">PC</li>
-          <li className="nav-item">Console</li>
-          <li className="nav-item">Mobile</li>
-          <li className="nav-item">Lifestyle</li>
-          <li className="nav-item">Services</li>
-          <li className="nav-item">Commuinity</li>
-          <li className="nav-item">Support</li>
-          <li className="nav-item">Store</li>
-          <li className="text-primary-400">
-            <AiOutlineSearch className="nav-item scale-150" />
-          </li>
-        </ul>
+        {search ? (
+          <SearchBox />
+        ) : (
+          <ul className="hidden md:flex items-center gap-4 lg:gap-8 xl:gap-16">
+            <li className="nav-item">PC</li>
+            <li className="nav-item">Console</li>
+            <li className="nav-item">Mobile</li>
+            <li className="nav-item">Lifestyle</li>
+            <li className="nav-item">Services</li>
+            <li className="nav-item">Commuinity</li>
+            <li className="nav-item">Support</li>
+            <li className="nav-item">Store</li>
+            <li className="text-primary-400">
+              <AiOutlineSearch
+                className="nav-item scale-150"
+                onClick={() => {
+                  setSearch(!search)
+                  setCart(false)
+                }}
+              />
+            </li>
+          </ul>
+        )}
         <div className="relative md:mr-auto text-primary-400">
-          <AiOutlineShoppingCart
-            className="nav-item scale-150"
-            onClick={() => setCart(!cart)}
-          />
+          {search ? (
+            <VscClose
+              className="scale-150 cursor-pointer"
+              onClick={() => setSearch(!search)}
+            />
+          ) : (
+            <AiOutlineShoppingCart
+              className="nav-item scale-150"
+              onClick={() => setCart(!cart)}
+            />
+          )}
           {cart && (
             <div className="dropdown md:text-base absolute z-10 flex flex-col px-4 bg-primary-800 py-2 w-60 -left-[13.25rem] md:-left-52 top-[200%] border-2 border-primary-200 rounded-lg">
               <div>
