@@ -1,16 +1,12 @@
 import { FaAngleRight } from "react-icons/fa"
-import { SiLinkedin } from "react-icons/si"
-import { VscGithub } from "react-icons/vsc"
-import { AiOutlineTwitter } from "react-icons/ai"
-import { FaDev } from "react-icons/fa"
-import ForkMe from "../Other/ForkMe"
+import MySection from "./MySection"
 
 function Footer() {
   return (
-    <footer className="relative text-xs hidden md:grid px-[5%] lg:px-[15%] bg-primary-850 text-primary-400 overflow-hidden">
+    <footer className="relative text-xs md:grid px-[5%] lg:px-[15%] bg-primary-850 text-primary-400 overflow-hidden">
       <div className="grid grid-cols-5 py-8">
         <div>
-          <ul>
+          <ul className="">
             <li className="title">Shop</li>
             <li>RazerStores</li>
             <li>RazerCafe</li>
@@ -54,49 +50,16 @@ function Footer() {
             <li>Contact Us</li>
           </ul>
         </div>
-        <div className="flex flex-col ml-auto">
-          <p className="text-razer-green text-sm text-right">
-            Built by Deveesh Shetty
-          </p>
-          <div className="flex gap-2 mt-2 text-razer-green text-2xl justify-end">
-            <a
-              href="https://github.com/Deveesh-Shetty"
-              target="_blank"
-              className=" hover:text-primary-100"
-            >
-              <VscGithub />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/deveesh-shetty-908539214"
-              target="_blank"
-              className=" hover:text-primary-100"
-            >
-              <SiLinkedin />
-            </a>
-            <a
-              href="https://twitter.com/shettydeveesh"
-              target="_blank"
-              className=" hover:text-primary-100"
-            >
-              <AiOutlineTwitter />
-            </a>
-            <a
-              href="https://dev.to/deveeshshetty1209"
-              target="_blank"
-              className=" hover:text-primary-100"
-            >
-              <FaDev />
-            </a>
-          </div>
-          <div className="mt-3">
-            <ForkMe />
-          </div>
+        <div className="hidden md:flex">
+          <MySection />
         </div>
       </div>
-      <div className="flex justify-between border-t-[1px] border-t-primary-400 py-4">
-        <div className="flex flex-col lg:flex-row gap-2 md:gap-1  ">
-          <p>Copyright &copy; 2023 Razer Inc. All rights reserved</p>
-          <div className="flex gap-4">
+      <div className="flex flex-col md:flex-row justify-between items-center md:items-start md:border-t-[1px] border-t-primary-400 py-4">
+        <div className="flex flex-col items-center md:items-start sm:flex-row md:flex-col lg:flex-row justify-center gap-1 pb-6 md:pb-0">
+          <p className="text-primary-100 md:text-primary-400">
+            Copyright &copy; 2023 Razer Inc. All rights reserved
+          </p>
+          <div className="flex gap-1 md:gap-4">
             <p className="hover:text-primary-100 hover:underline cursor-pointer">
               Site Map
             </p>
@@ -114,7 +77,7 @@ function Footer() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
+        <div className="flex items-center justify-center gap-2 md:border-none border-t-[1px] border-t-primary-400 pt-6 md:pt-0 w-full md:w-max">
           <div className="flex gap-2">
             <p className="text-primary-100">United States</p>
             <p className="text-primary-100">|</p>
@@ -124,6 +87,9 @@ function Footer() {
             <FaAngleRight />
           </div>
         </div>
+      </div>
+      <div className="md:hidden pb-6">
+        <MySection />
       </div>
     </footer>
   )

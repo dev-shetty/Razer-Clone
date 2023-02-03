@@ -19,7 +19,7 @@ function Navbar() {
   const { nav, setNav } = useContext(NavbarContext)
   return (
     <>
-      <nav className="sticky top-0 w-full bg-primary-900 z-50 flex items-center px-4 justify-between md:justify-center gap-8 xl:gap-16 py-3 border-b-[1px] border-b-razer-green">
+      <nav className="md:sticky top-0 w-full bg-primary-900 z-50 flex items-center px-4 justify-between md:justify-center gap-8 xl:gap-16 py-3 border-b-[1px] border-b-razer-green">
         <div className="block md:hidden cursor-pointer z-20">
           {nav ? (
             <AiOutlineClose
