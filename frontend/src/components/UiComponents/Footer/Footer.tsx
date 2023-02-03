@@ -30,7 +30,7 @@ function Footer() {
             className="md:hidden absolute right-0 top-2 cursor-pointer text-2xl font-bold hover:text-razer-green transition-colors"
             onClick={() => setIsActive((prev) => (prev === 1 ? 0 : 1))}
           >
-            {isActive ? "-" : "+"}
+            {isActive === 1 ? "-" : "+"}
           </p>
         </div>
         <div>
@@ -50,7 +50,7 @@ function Footer() {
             className="md:hidden absolute right-0 top-2 cursor-pointer text-2xl font-bold hover:text-razer-green transition-colors"
             onClick={() => setIsActive((prev) => (prev === 2 ? 0 : 2))}
           >
-            {isActive ? "-" : "+"}
+            {isActive === 2 ? "-" : "+"}
           </p>
         </div>
         <div>
@@ -72,7 +72,7 @@ function Footer() {
             className="md:hidden absolute right-0 top-2 cursor-pointer text-2xl font-bold hover:text-razer-green transition-colors"
             onClick={() => setIsActive((prev) => (prev === 3 ? 0 : 3))}
           >
-            {isActive ? "-" : "+"}
+            {isActive === 3 ? "-" : "+"}
           </p>
         </div>
         <div>
@@ -92,7 +92,7 @@ function Footer() {
             className="md:hidden absolute right-0 top-2 cursor-pointer text-2xl font-bold hover:text-razer-green transition-colors"
             onClick={() => setIsActive((prev) => (prev === 4 ? 0 : 4))}
           >
-            {isActive ? "-" : "+"}
+            {isActive === 4 ? "-" : "+"}
           </p>
         </div>
         <div className="hidden md:flex">
