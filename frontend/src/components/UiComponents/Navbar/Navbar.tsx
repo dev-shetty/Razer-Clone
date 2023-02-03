@@ -77,7 +77,7 @@ function Navbar() {
             onClick={() => setCart(!cart)}
           />
           {cart && (
-            <div className="dropdown md:text-base absolute flex flex-col px-4 bg-primary-800 py-2 w-60 -left-[13.25rem] md:-left-52 top-[200%] border-2 border-primary-200 rounded-lg">
+            <div className="dropdown md:text-base absolute z-10 flex flex-col px-4 bg-primary-800 py-2 w-60 -left-[13.25rem] md:-left-52 top-[200%] border-2 border-primary-200 rounded-lg">
               <div>
                 <div className="text-xs py-4 text-center">
                   <p>Your Cart is Empty</p>
