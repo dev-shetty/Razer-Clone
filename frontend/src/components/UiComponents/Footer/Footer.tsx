@@ -1,54 +1,99 @@
-import { FaAngleRight } from "react-icons/fa"
+import { useEffect, useState } from "react"
+import { FaAngleRight, FaPlus } from "react-icons/fa"
+import useScreenResize from "../../../hooks/useScreenResize"
 import MySection from "./MySection"
 
 function Footer() {
+  const { screenWidth } = useScreenResize()
+  const [isActive, setIsActive] = useState(0)
+
   return (
     <footer className="relative text-xs md:grid px-[5%] lg:px-[15%] bg-primary-850 text-primary-400 overflow-hidden">
-      <div className="grid grid-cols-5 py-8">
+      <div className="flex flex-col md:grid md:grid-cols-5 py-8">
         <div>
-          <ul className="">
+          <ul>
             <li className="title">Shop</li>
-            <li>RazerStores</li>
-            <li>RazerCafe</li>
-            <li>Store Locator</li>
-            <li>Purchase Programs</li>
-            <li>Education</li>
-            <li>Exclusives</li>
-            <li>RazerStore Rewards</li>
-            <li>Newsletter</li>
+            {(screenWidth >= 768 || isActive === 1) && (
+              <div>
+                <li>RazerStores</li>
+                <li>RazerCafe</li>
+                <li>Store Locator</li>
+                <li>Purchase Programs</li>
+                <li>Education</li>
+                <li>Exclusives</li>
+                <li>RazerStore Rewards</li>
+                <li>Newsletter</li>
+              </div>
+            )}
           </ul>
+          <p
+            className="md:hidden absolute right-0 top-2 cursor-pointer text-2xl font-bold hover:text-razer-green transition-colors"
+            onClick={() => setIsActive((prev) => (prev === 1 ? 0 : 1))}
+          >
+            {isActive ? "-" : "+"}
+          </p>
         </div>
         <div>
           <ul>
             <li className="title">Explore</li>
-            <li>Technology</li>
-            <li>Chroma RGB</li>
-            <li>Concepts</li>
-            <li>Esports</li>
-            <li>Collabs</li>
+            {(screenWidth >= 768 || isActive === 2) && (
+              <div>
+                <li>Technology</li>
+                <li>Chroma RGB</li>
+                <li>Concepts</li>
+                <li>Esports</li>
+                <li>Collabs</li>
+              </div>
+            )}
           </ul>
+          <p
+            className="md:hidden absolute right-0 top-2 cursor-pointer text-2xl font-bold hover:text-razer-green transition-colors"
+            onClick={() => setIsActive((prev) => (prev === 2 ? 0 : 2))}
+          >
+            {isActive ? "-" : "+"}
+          </p>
         </div>
         <div>
           <ul>
             <li className="title">Support</li>
-            <li>Get Help</li>
-            <li>Registration & Warranty</li>
-            <li>RazerStore Support</li>
-            <li>RazerCare</li>
-            <li>Manage Razer ID</li>
-            <li>Support Videos</li>
-            <li>Accessibility Statement</li>
+            {(screenWidth >= 768 || isActive === 3) && (
+              <div>
+                <li>Get Help</li>
+                <li>Registration & Warranty</li>
+                <li>RazerStore Support</li>
+                <li>RazerCare</li>
+                <li>Manage Razer ID</li>
+                <li>Support Videos</li>
+                <li>Accessibility Statement</li>
+              </div>
+            )}
           </ul>
+          <p
+            className="md:hidden absolute right-0 top-2 cursor-pointer text-2xl font-bold hover:text-razer-green transition-colors"
+            onClick={() => setIsActive((prev) => (prev === 3 ? 0 : 3))}
+          >
+            {isActive ? "-" : "+"}
+          </p>
         </div>
         <div>
           <ul>
             <li className="title">Company</li>
-            <li>About Us</li>
-            <li>Careers</li>
-            <li>Press Room</li>
-            <li>ZVentures</li>
-            <li>Contact Us</li>
+            {(screenWidth >= 768 || isActive === 4) && (
+              <div>
+                <li>About Us</li>
+                <li>Careers</li>
+                <li>Press Room</li>
+                <li>ZVentures</li>
+                <li>Contact Us</li>
+              </div>
+            )}
           </ul>
+          <p
+            className="md:hidden absolute right-0 top-2 cursor-pointer text-2xl font-bold hover:text-razer-green transition-colors"
+            onClick={() => setIsActive((prev) => (prev === 4 ? 0 : 4))}
+          >
+            {isActive ? "-" : "+"}
+          </p>
         </div>
         <div className="hidden md:flex">
           <MySection />
@@ -77,7 +122,7 @@ function Footer() {
             </p>
           </div>
         </div>
-        <div className="flex items-center justify-center gap-2 md:border-none border-t-[1px] border-t-primary-400 pt-6 md:pt-0 w-full md:w-max">
+        <div className="flex items-center justify-center gap-2 md:border-none border-t-[1px] border-t-primary-200 pt-6 md:pt-0 w-full md:w-max">
           <div className="flex gap-2">
             <p className="text-primary-100">United States</p>
             <p className="text-primary-100">|</p>

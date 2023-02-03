@@ -51,12 +51,16 @@ body,
 }
 
 .title {
-  @apply text-primary-100;
+  @apply text-primary-100 py-4 md:py-0;
 }
-footer ul {
+footer div:has(> ul > .title) {
+  @apply relative md:block flex items-center justify-between border-b-[1px] border-b-primary-200 md:border-none;
+}
+footer ul,
+footer ul > div {
   @apply flex flex-col gap-2;
 }
-footer ul > li:not(.title) {
+footer ul li:not(.title) {
   @apply hover:text-primary-100 hover:underline cursor-pointer transition-colors w-fit;
 }
 .mobile-nav-item {
@@ -78,6 +82,14 @@ footer ul > li:not(.title) {
   @apply bg-primary-800 border-t-2 border-l-2 border-primary-200;
 }
 
+@media screen and (max-width: 768px) {
+  footer ul > li:not(:is(.title)) {
+    @apply hidden;
+  }
+  footer ul > div {
+    @apply pb-4;
+  }
+}
 @media screen and (max-width: 50em) {
   .razer-edge {
     background-image: url("/Backgrounds/razer-edge-homepage-mobile2x.jpg");
