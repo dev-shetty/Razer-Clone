@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
-import { FaAngleRight, FaPlus } from "react-icons/fa"
+import { useState } from "react"
+import { FaAngleRight } from "react-icons/fa"
 import useScreenResize from "../../../hooks/useScreenResize"
 import MySection from "./MySection"
 
@@ -104,7 +104,7 @@ function Footer() {
           <p className="text-primary-100 md:text-primary-400">
             Copyright &copy; 2023 Razer Inc. All rights reserved
           </p>
-          <div className="flex gap-1 md:gap-4">
+          <div className="flex text-center gap-1 md:gap-4 mt-2 md:mt-0">
             <p className="hover:text-primary-100 hover:underline cursor-pointer">
               Site Map
             </p>
@@ -124,7 +124,7 @@ function Footer() {
         </div>
         <div className="flex items-center justify-center gap-2 md:border-none border-t-[1px] border-t-primary-200 pt-6 md:pt-0 w-full md:w-max">
           <div className="flex gap-2">
-            <p className="text-primary-100">United States</p>
+            <p className="text-primary-100">India</p>
             <p className="text-primary-100">|</p>
           </div>
           <div className="flex items-center hover:text-primary-100 hover:underline cursor-pointer">

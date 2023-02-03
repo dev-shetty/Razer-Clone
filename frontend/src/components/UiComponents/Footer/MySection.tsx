@@ -7,7 +7,7 @@ import ForkMe from "../Other/ForkMe"
 function MySection() {
   return (
     <div className="flex flex-col ml-auto items-center">
-      <div className="flex md:flex-col items-end md:items-center gap-2 md:gap-0 mb-1 md:mb-0">
+      <div className="flex flex-col sm:flex-row md:flex-col items-center sm:items-end md:items-center gap-2 md:gap-0 mb-1 md:mb-0">
         <p className="text-razer-green text-sm text-right">
           Built by Deveesh Shetty
         </p>

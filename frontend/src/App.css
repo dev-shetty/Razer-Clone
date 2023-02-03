@@ -82,6 +82,14 @@ footer ul li:not(.title) {
   @apply bg-primary-800 border-t-2 border-l-2 border-primary-200;
 }
 
+.no-scroll::-webkit-scrollbar {
+  display: none;
+}
+.no-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 @media screen and (max-width: 768px) {
   footer ul > li:not(:is(.title)) {
     @apply hidden;
@@ -103,6 +111,32 @@ footer ul li:not(.title) {
   .razer-enki-pro {
     background-image: url("/Backgrounds/enkipro-lamborghini-b-mobile.jpg");
     background-position: center 75%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .fork-me {
+    @apply shadow-md shadow-primary-800;
+  }
+  .fork-me::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    bottom: -20%;
+    z-index: -10;
+    left: -50%;
+    right: 80%;
+    @apply bg-razer-green;
+  }
+  .fork-me::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    bottom: -20%;
+    z-index: -10;
+    left: 80%;
+    right: -50%;
+    @apply bg-razer-green;
   }
 }
 /* 

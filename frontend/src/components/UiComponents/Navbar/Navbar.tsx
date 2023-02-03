@@ -34,7 +34,7 @@ function Navbar() {
           )}
         </div>
         {nav && (
-          <nav className="fixed md:hidden inset-0 bg-primary-900 z-10">
+          <nav className="no-scroll fixed overflow-auto md:hidden inset-0 bg-primary-900 z-10">
             <div className="mt-16 mx-4">
               <SearchBox />
               <div className="m-4">
