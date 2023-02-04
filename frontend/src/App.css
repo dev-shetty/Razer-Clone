@@ -116,27 +116,24 @@ footer ul li:not(.title) {
 
 @media only screen and (min-width: 1024px) {
   .fork-me {
-    @apply shadow-md shadow-primary-800;
+    @apply shadow-md shadow-primary-800 hover:after:bg-primary-100 hover:before:bg-primary-100 transition-colors;
   }
-  .fork-me::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    bottom: -20%;
-    z-index: -10;
-    left: -50%;
-    right: 80%;
-    @apply bg-razer-green;
-  }
+  .fork-me::after,
   .fork-me::before {
     content: "";
     position: absolute;
     top: 50%;
     bottom: -20%;
     z-index: -10;
+    @apply bg-razer-green;
+  }
+  .fork-me::after {
+    left: -50%;
+    right: 80%;
+  }
+  .fork-me::before {
     left: 80%;
     right: -50%;
-    @apply bg-razer-green;
   }
 }
 /* 
