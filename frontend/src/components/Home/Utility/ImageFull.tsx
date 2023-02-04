@@ -20,8 +20,8 @@ function ImageFull({
   isSmallGrid,
   label,
 }: Props) {
-  // Gets Date of 6 Feb 2023
-  const date = new Date(2023, 1, 6).getTime()
+  // Gets Date of 1 March 2023
+  const date = new Date(2023, 2, 1).getTime()
   const [days, hours, minutes, seconds] = useCountdown(date)
   return (
     <div className="flex justify-center">
